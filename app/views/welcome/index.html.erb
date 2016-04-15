@@ -1,6 +1,24 @@
 <div class="container">
   <div class="row">
-    <h1>Welcome#index</h1>
-    <p>Find me in app/views/welcome/index.html.erb</p>
+    <h1>RD</h1>
+    <div class="col s12">
+      <% @rd_rules.each do |rules_file| %>
+        <%= link_to rules_file.name, rules_file %> | <%= link_to edit_rules_file_path(rules_file), :class => 'btn' do %><i class="material-icons">mode_edit</i><% end %><%= link_to rules_file, :class => 'btn red', method: :delete, data: { confirm: 'Are you sure?' } do %><i class="material-icons">delete</i><% end %><br>
+      <% end %>
+    </div>
   </div>
+  <div class="row">
+    <h1>Country</h1>
+    <div class="col s12">
+      <% @rdc_rules.each do |rules_file| %>
+        <%= link_to rules_file.name, rules_file %> | <%= link_to edit_rules_file_path(rules_file), :class => 'btn' do %><i class="material-icons">mode_edit</i><% end %><%= link_to rules_file, :class => 'btn red', method: :delete, data: { confirm: 'Are you sure?' } do %><i class="material-icons">delete</i><% end %><br>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <%= link_to(new_rules_file_path, :class => 'btn-floating btn-large red') do %>
+  <i class="large material-icons">add</i>
+  <% end %>
 </div>

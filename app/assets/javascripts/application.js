@@ -1,5 +1,8 @@
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
 //= require materialize-sprockets
 //= require _materialize-inits
+
+
+//= require turbolinks
