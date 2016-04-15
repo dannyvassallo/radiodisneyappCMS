@@ -2,17 +2,21 @@
   <div class="row">
     <h1>RD</h1>
     <div class="col s12">
+      <ul class="collection">
       <% @rd_rules.each do |rules_file| %>
-        <%= link_to rules_file.name, rules_file %> | <%= link_to edit_rules_file_path(rules_file), :class => 'btn' do %><i class="material-icons">mode_edit</i><% end %><%= link_to rules_file, :class => 'btn red', method: :delete, data: { confirm: 'Are you sure?' } do %><i class="material-icons">delete</i><% end %><br>
+        <li class="collection-item"><%= link_to rules_file.name, rules_file %><div class="right btn-container"><%= link_to edit_rules_file_path(rules_file), :class => 'btn' do %><i class="material-icons">mode_edit</i><% end %><%= link_to rules_file, :class => 'btn red', method: :delete, data: { confirm: 'Are you sure?' } do %><i class="material-icons">delete</i><% end %></div></li>
       <% end %>
+      </ul>
     </div>
   </div>
   <div class="row">
     <h1>Country</h1>
     <div class="col s12">
+      <ul class="collection">
       <% @rdc_rules.each do |rules_file| %>
-        <%= link_to rules_file.name, rules_file %> | <%= link_to edit_rules_file_path(rules_file), :class => 'btn' do %><i class="material-icons">mode_edit</i><% end %><%= link_to rules_file, :class => 'btn red', method: :delete, data: { confirm: 'Are you sure?' } do %><i class="material-icons">delete</i><% end %><br>
+        <li class="collection-item"><%= link_to rules_file.name, rules_file %><div class="right btn-container"><%= link_to edit_rules_file_path(rules_file), :class => 'btn' do %><i class="material-icons">mode_edit</i><% end %><%= link_to rules_file, :class => 'btn red', method: :delete, data: { confirm: 'Are you sure?' } do %><i class="material-icons">delete</i><% end %></div></li>
       <% end %>
+      </ul>
     </div>
   </div>
 </div>
