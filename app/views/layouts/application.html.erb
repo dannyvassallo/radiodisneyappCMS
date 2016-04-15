@@ -4,12 +4,15 @@
     <title>RadiodisneyappCMS</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render partial: "layouts/nav" %>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
