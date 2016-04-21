@@ -8,6 +8,7 @@ class RulesFilesController < ApplicationController
   end
 
   def show
+    response.headers.delete "X-Frame-Options"
     @rules_file = RulesFile.friendly.find(params[:id])
     render layout: 'bare'
   end
