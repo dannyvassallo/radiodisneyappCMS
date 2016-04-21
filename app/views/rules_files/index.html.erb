@@ -1,2 +1,46 @@
-<h1>RulesFiles#index</h1>
-<p>Find me in app/views/rules_files/index.html.erb</p>
+<div class="container rules">
+  <div class="row">
+    <div class="col s12 m10 offset-m1 z-depth-3 white">
+      <div class="row headline">
+        <div class="col s12 center-align">
+          <h5>SWEEPSTAKES & CONTEST RULES</h5>
+          <p>Select one to view the rules</p>
+        </div>
+      </div>
+    <% if @rd_rules.length > 0 %>
+      <div class="row rules-list">
+          <div class="rd-list-logo col s8 offset-s2 m6 offset-m3 center-align">
+            <img class="responsive-img" src="https://s3.amazonaws.com/myfangate.com/radiodisneyapp/rdlogo.jpg">
+          </div>
+          <div class="col s12">
+            <ul class="collection">
+            <% @rd_rules.each do |rules_file| %>
+              <li class="collection-item"><%= link_to rules_file.name, rules_file, :class => "grey-text text-darken-1" %><div class="right btn-container"><%= link_to edit_rules_file_path(rules_file), :class => 'btn' do %><i class="material-icons">mode_edit</i><% end %><%= link_to rules_file, :class => 'btn red', method: :delete, data: { confirm: 'Are you sure?' } do %><i class="material-icons">delete</i><% end %></div></li>
+            <% end %>
+            </ul>
+          </div>
+      </div>
+      <% end %>
+      <% if @rdc_rules.length > 0 %>
+      <div class="row">
+        <div class="rd-list-logo col s8 offset-s2 m6 offset-m3 center-align">
+          <img class="responsive-img" src="https://s3.amazonaws.com/myfangate.com/radiodisneyapp/rdcountry.jpg">
+        </div>
+        <div class="col s12">
+          <ul class="collection">
+          <% @rdc_rules.each do |rules_file| %>
+            <li class="collection-item"><%= link_to rules_file.name, rules_file, :class => "grey-text text-darken-1" %><div class="right btn-container"><%= link_to edit_rules_file_path(rules_file), :class => 'btn' do %><i class="material-icons">mode_edit</i><% end %><%= link_to rules_file, :class => 'btn red', method: :delete, data: { confirm: 'Are you sure?' } do %><i class="material-icons">delete</i><% end %></div></li>
+          <% end %>
+          </ul>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <%= link_to(new_rules_file_path, :class => 'btn-floating btn-large red') do %>
+  <i class="large material-icons">add</i>
+  <% end %>
+</div>

@@ -1,4 +1,5 @@
+@import 'fonts';
 @import "materialize/components/color";
-$primary-color: color("blue", "lighten-2") !default;
+$primary-color: color("grey", "darken-4") !default;
 @import 'materialize';
 @import 'rules_files';

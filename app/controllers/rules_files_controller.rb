@@ -1,10 +1,12 @@
 class RulesFilesController < ApplicationController
   def index
-    @rules_files = RulesFile.all
+    @rd_rules = RulesFile.where(station: "Radio Disney").to_a
+    @rdc_rules = RulesFile.where(station: "Radio Disney Country").to_a
   end
 
   def show
     @rules_file = RulesFile.friendly.find(params[:id])
+    render layout: 'bare'
   end
 
   def new

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'PlacardMT-BoldCondensed';
+  src: asset-url('PlacardMT-BoldCondensed.eot?') format('eot'),
+       asset-url('PlacardMT-BoldCondensed.woff') format('woff'),
+       asset-url('PlacardMT-BoldCondensed.ttf')  format('truetype'),
+       asset-url('PlacardMT-BoldCondensed.svg#PlacardMT-BoldCondensed') format('svg');
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'PlacardMT-BoldCondensed';
+}
