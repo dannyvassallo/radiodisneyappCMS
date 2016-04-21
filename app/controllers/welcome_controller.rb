@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
+    response.headers.delete "X-Frame-Options"
     @rd_rules = RulesFile.where(station: "Radio Disney").to_a
     @rdc_rules = RulesFile.where(station: "Radio Disney Country").to_a
     if current_user != nil && current_user.role == 'admin'
