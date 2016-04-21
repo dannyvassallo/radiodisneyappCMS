@@ -1,0 +1,8 @@
+<script type="text/javascript">
+  $(function(){
+    var docUrl = '<%= @rules_file.document.url %>';
+    var iframeUrl ='//docs.google.com/gview?url='+docUrl+'&embedded=true';
+    var a = $('<iframe>').attr('src', iframeUrl).addClass('form-viewer');
+    $('body').append(a);
+  });
+</script>

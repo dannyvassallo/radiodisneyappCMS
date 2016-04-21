@@ -1,0 +1,22 @@
+<%= form_for @rules_file do |f| %>
+  <div class="input-field col s12">
+    <%= f.text_field :name %>
+    <label for="name">Rules File Name</label>
+  </div>
+  <div class="file-field input-field col s12">
+    <div class="btn">
+      <span>Rules Document Upload</span>
+      <%= f.file_field :document %>
+    </div>
+    <div class="file-path-wrapper">
+      <input class="file-path validate" type="text" placeholder="Upload one or more files">
+    </div>
+  </div>
+  <div class="input-field col s12">
+  <%= f.select :station, options_for_select([["Choose A Station",nil, {:disabled =>'disabled', :selected => 'selected'}],["Radio Disney","Radio Disney"],["Radio Disney Country","Radio Disney Country"]]) %>
+  <label>Select a Radio Station</label>
+  </div>
+  <div class="input-field col s12 center-align">
+    <%= f.submit "Save", :class => 'btn btn-large bottom' %>
+  </div>
+<% end %>
