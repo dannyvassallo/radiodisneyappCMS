@@ -1,6 +1,7 @@
 GIT
-  remote: git@github.com:plataformatec/devise.git
+  remote: git://github.com/plataformatec/devise.git
   revision: 48220f087bc807629b42d731f6b68fe625edbb91
+  branch: master
   specs:
     devise (4.0.0)
       bcrypt (~> 3.0)
