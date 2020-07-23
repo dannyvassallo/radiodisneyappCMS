@@ -1,20 +1,20 @@
-#Radio Disney App CMS
+# Radio Disney App CMS
 
 A backend for RD to upload their rules docs... so that I don't have to.
 
-####Figaro
+#### Figaro
 In the terminal:
 ```
 figaro heroku:set -e production
 ```
 
-####New Users
+#### New Users
 In the browser:
 ```
 https://<<sitename>>/users/8626705366
 ```
 
-####Create admin
+#### Create admin
 
 First sign up as a new user, then do one of the following.
 
@@ -34,7 +34,7 @@ u.update_attributes(:role => 'admin')
 u.save!
 ```
 
-####Embed rules page
+#### Embed rules page
 
 
 ```html
